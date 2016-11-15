@@ -1,0 +1,44 @@
+<!-- Clientsc6J.htm -->
+<HTML>
+  <HEAD>
+    <TITLE> Client side scripting - Javascript Reading Data from List Box </TITLE>
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+  function cmdSubmit_OnClick() {
+	$(document).ready(function (){
+		var selectedOption = $('#fruits option:selected');
+		alert(" Fruit Choice = " + "\n" + "\t" + selectedOption.val()) ;
+   		});
+
+  
+
+
+}
+</script> 
+  </HEAD>
+  <BODY>
+    <H2> <CENTER> Client Side Scripting </CENTER> </H2>
+    <H3> <CENTER> Reading Data from the List Box Control </CENTER></H3>
+    <H4> <CENTER> (Use SIZE attribute to change a drop down to a List Box)
+                                                                           </CENTER> </H4>
+    <H4> <CENTER> (Use MULTIPLE attribute to allow multiple Selections)
+                                                                           </CENTER> </H4>
+    <HR>
+    <H4> Choose one or more Fruits </H4>
+     <PRE>
+               <SELECT id="fruits" SIZE=4 MULTIPLE>
+                 <OPTION VALUE=Orange> Orange
+                 <OPTION VALUE=Apple SELECTED> Apple
+                 <OPTION VALUE=Bannana> Bannana
+                 <OPTION VALUE=Mango> Mango
+               </SELECT>
+      <HR>
+ 
+      <INPUT TYPE=BUTTON VALUE="Submit Fruit Choices" NAME="cmdSubmit"
+             onClick="cmdSubmit_OnClick();">
+     </PRE>
+ 
+     
+  </BODY>
+<HTML>

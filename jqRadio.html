@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Clientsc4J.htm -->
+<html>
+  <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title> Client side scripting - Javascript Reading Data from Radio Buttons </title>
+ 
+  <script>
+   function cmdSubmit_OnClick() {
+	
+     var i;
+     var strChoice= [];
+     
+	$('div input[type=radio]').each(function (){
+  if($(this).is(":checked")){
+	strChoice.push($(this).attr('name'));
+}
+});
+  	$('div1 input[type=radio]').each(function (){
+  if($(this).is(":checked")){
+	strChoice.push($(this).attr('name'));
+}
+});
+
+
+
+
+     alert (" Dinner Choices = " + "\n" + strChoice);
+   
+
+
+       
+
+
+
+     
+
+
+
+}
+
+
+  </script>
+<style>
+   h2 {text-align:center;}
+   h3 {text-align:center;}
+   h4 {text-align:center;}
+</style>
+ 
+  </HEAD>
+  <BODY>
+ 
+    <H4> Radio selection using jquery</H4>
+    
+     <div>
+      <INPUT type="radio" NAME=Pizza/> Pizza <br />
+      <INPUT type="radio" NAME=Steak />Steak <br />
+      <INPUT type="radio" NAME=Fish/>Fish <br />
+     </br>
+       Choose a Dessert 
+	</div>
+<div1>
+     <INPUT type="radio" NAME=Chocolate Cake VALUE="Chocolate Cake"/> Chocolate Cake <br/>   <INPUT TYPE=RADIO NAME=Cheese Cake/> CheeseCake  <br/>
+      Icecream Sundae <INPUT TYPE=RADIO NAME=Icecream Sundae VALUE="Icecream Sundae">
+    
+
+ 
+     <INPUT TYPE=button value="Submit Dinner and Dessert Choices" onclick="cmdSubmit_OnClick();" />
+    </div1>     
+    
+  </BODY>
+</HTML>
